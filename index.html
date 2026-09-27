@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Log Pose OPfans</title>
+  <meta name="description" content="Página no oficial de logros de One Piece para OPfans.">
+  <link rel="icon" href="assets/icons/logo.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="The Log Pose OPfans">
+      <img src="assets/icons/logo.svg" alt="The Log Pose OPfans">
+    </a>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#logros">Logros</a>
+      <a href="#como">Cómo funciona</a>
+    </nav>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">ONE PIECE · OPfans</span>
+        <h1>THE LOG POSE<br><span>OPfans</span></h1>
+        <p>Tu recorrido por One Piece convertido en una colección de logros.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#logros">Ver logros</a>
+          <a class="button secondary" href="#como">¿Cómo funciona?</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="compass">◎</div>
+        <p>PROGRESO</p>
+        <strong id="heroProgress">0 / 0</strong>
+        <small>logros desbloqueados</small>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Estadísticas">
+      <div><strong id="unlockedCount">0</strong><span>Desbloqueados</span></div>
+      <div><strong id="totalCount">0</strong><span>Logros totales</span></div>
+      <div><strong id="progressPercent">0%</strong><span>Progreso</span></div>
+    </section>
+
+    <section id="logros" class="section">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">TU VIAJE</span>
+          <h2>Logros</h2>
+        </div>
+        <div class="filters">
+          <input id="search" type="search" placeholder="Buscar logro..." aria-label="Buscar logro">
+          <select id="arcFilter" aria-label="Filtrar por arco">
+            <option value="all">Todos los arcos</option>
+          </select>
+          <select id="statusFilter" aria-label="Filtrar por estado">
+            <option value="all">Todos</option>
+            <option value="unlocked">Desbloqueados</option>
+            <option value="locked">Bloqueados</option>
+          </select>
+        </div>
+      </div>
+      <div id="achievementGrid" class="grid"></div>
+    </section>
+
+    <section id="como" class="section how">
+      <div>
+        <span class="eyebrow">SISTEMA</span>
+        <h2>¿Cómo funciona?</h2>
+      </div>
+      <div class="steps">
+        <article><b>01</b><h3>Avanzá en la historia</h3><p>Los logros representan momentos, arcos o desafíos de tu recorrido.</p></article>
+        <article><b>02</b><h3>Conseguí la palabra clave</h3><p>La persona que administra la página puede publicar una palabra relacionada con el logro.</p></article>
+        <article><b>03</b><h3>Desbloquealo</h3><p>Ingresá la palabra exacta en el botón del logro. El progreso queda guardado en este navegador.</p></article>
+      </div>
+      <div class="note">
+        <strong>Importante:</strong> esta es una página fan/no oficial. No está afiliada con Eiichiro Oda, Shueisha, Toei Animation ni otros titulares de derechos de One Piece.
+      </div>
+    </section>
+  </main>
+
+  <dialog id="unlockDialog">
+    <form method="dialog" id="unlockForm">
+      <button class="close" value="cancel" aria-label="Cerrar">×</button>
+      <span class="eyebrow">DESBLOQUEAR</span>
+      <h2 id="dialogTitle">Logro</h2>
+      <p>Ingresá la palabra clave para reclamar este logro.</p>
+      <input id="keywordInput" autocomplete="off" spellcheck="false" placeholder="Palabra clave">
+      <p id="dialogMessage" class="dialog-message"></p>
+      <button class="button primary full" value="default">Desbloquear</button>
+    </form>
+  </dialog>
+
+  <footer>
+    <span>The Log Pose OPfans</span>
+    <span>Fan project · No oficial</span>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
